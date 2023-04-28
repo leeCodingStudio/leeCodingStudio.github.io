@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lee's Portfolio</title>
+    <meta name="auther" content="Lee">
+    <meta name="description" content="세계에서 짱먹는 개발자">
+    <link rel="icon" type="image/png" href="./images/dog_icon.png">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/1bf31ed49f.js" crossorigin="anonymous"></script>
+    <script src="./script.js" defer></script>
+    
+</head>
+<body>
+    <!-- Navbar 시작 -->
+    <nav id="navbar">
+        <div class="navbar__logo">
+            <i class="fa-solid fa-paw"></i>
+            <a href="#">Lee</a>
+        </div>
+        <div class="navbar_action">
+            <ul class="navbar__menu">
+                <!-- goToScroll()메서드가 클릭 시 실행될 수 있도록 조정. class의 이름을 기준으로 이동. -->
+                <li class="navbar__menu__item active" onclick="goToScroll('home')">홈</li> <!-- li에 active의 효과를 줌 -->
+                <li class="navbar__menu__item" onclick="goToScroll('about')">내 소개</li>
+                <li class="navbar__menu__item" onclick="goToScroll('skills')">기술</li>
+                <li class="navbar__menu__item" onclick="goToScroll('work')">내 작업실</li>
+                <li class="navbar__menu__item" onclick="goToScroll('testimonials')">추천서</li>
+                <li class="navbar__menu__item" onclick="goToScroll('contact')">연락주세요</li>
+            </ul>
+        </div>
+        <button class="navbar__toggle-btn"  onclick="Menu_active()">
+            <i class="fa-solid fa-burger"></i>
+        </button>
+    </nav>
+    <!-- Navbar 끝 -->
+    <!-- 홈 시작 -->
+    <section id="home" class="section">
+        <div class="home__container">
+            <img src="./images/me.png" alt="Lee's Photo" class="home__avatar">
+            <h1 class="home__title">안녕하세요! 저는 이현준입니다!</h1>
+            <h2 class="home__description">서울 서대문구 홍은동에 거주하고, 흰둥이 러버로 살고 있습니다.</h2>
+            <button class="home__contact">연락주세요!</button>
+        </div>
+    </section>
+    <!-- 홈 끝 -->
+    <!-- 내소개 시작 -->
+    <section id="about" class="section section__container">
+        <h1>내 소개</h1>
+        <p>
+            안녕하세요. 흰둥이를 아주아주아주 사랑하는 이현준 입니다. 저는 흰둥이 사진이랑 굿즈, 피규어를 많이 소유하고 있습니다. <br>짱구 극장판도 전부 챙겨 보았고요. 흰둥이 관련된 정보를 굉장히 많이 아는 편 입니다.
+        </p>
+        <div class="about__majors">
+            <div class="major">
+                <div class="major__icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h2 class="major__title">프론트엔드</h2>
+                <div class="major__description">
+                    HTML, CSS, JavaScript, jQuery
+                </div>
+            </div>
+            <div class="major">
+                <div class="major__icon">
+                    <i class="fa-solid fa-gears"></i>
+                </div>
+                <h2 class="major__title">백엔드</h2>
+                <div class="major__description">
+                    Python, Node.js, Django, Java, JSP, Spring-boot 
+                </div>
+            </div>
+            <div class="major">
+                <div class="major__icon">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+                <h2 class="major__title">데이터베이스</h2>
+                <div class="major__description">
+                    Oracle, MySQL, Mybatis
+                </div>
+            </div>
+            <div class="major">
+                <div class="major__icon">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <h2 class="major__title">인공지능</h2>
+                <div class="major__description">
+                    데이터분석, 머신러닝, 딥러닝, Tensorflow, Pytoch
+                </div>
+            </div>
+        </div>
+        <div class="about__jobs">
+            <div class="job">
+                <img src="./images/job1.jpg" alt="떡잎유치원" class="about__jobs__icon">
+                <div class="job__description">
+                    <p class="job__name">
+                        떡잎 유치원
+                    </p>
+                    <p class="job__period">
+                        2022. 03 ~ 2023. 03
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 내소개 끝 -->
+
+    <!-- 기술 시작 -->
+    <section id="skills" class="section">
+        <div class="section__container">
+            <h1>기술</h1>
+            <h2>소개</h2>
+            <p>저는 프론트엔드와 백엔드, AI를 익혔으며, 새로운 기술과 트렌드를 익히는 것을 좋아하고 팀과 협업하여 작업하는 것을 즐기고 있습니다.</p>
+            <div class="skillset">
+                <div class="skillset__left">
+                    <h3 class="skillset__title">Language</h3>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>Python</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>DBMS</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>Java</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>JavaScript</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>데이터분석</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>머신러닝/딥러닝</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skillset__right">
+                    <div class="tools">
+                        <h3 class="skillset__title">Tools</h3>
+                        <ul class="tools__list">
+                            <li><span>Eclipse</span></li>
+                            <li><span>colaboratory</span></li>
+                            <li><span>Visual Studio Code</span></li>
+                            <li><span>Pycham</span></li>
+                            <li><span>Jupyter notebook</span></li>
+                            <li><span>Github Desktop</span></li>
+                            <li><span>IntelliJ</span></li>
+                        </ul>
+                    </div>
+                    <div class="etc">
+                        <h3 class="skillset__title">ETC</h3>
+                        <ul class="etc__list">
+                            <li><span>Math</span></li>
+                            <li><span>Music</span></li>
+                            <li><span>Run</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 기술 끝 -->
+    <!-- 내 작업실 시작 -->
+    <section id="work" class="section">
+        <div class="section__container">
+            <h1>내 작업실</h1>
+            <h3>프로젝트</h3>
+            <div class="work__categories">
+                <button class="category__btn selected" onclick="ProjectButtonClick('.project', this)">
+                    전체 <span class="category__count all__count"></span>
+                </button>
+                <button class="category__btn" onclick="ProjectButtonClick('.front', this)">
+                    프론트엔드 <span class="category__count front__count"></span>
+                </button>
+                <button class="category__btn" onclick="ProjectButtonClick('.back', this)">
+                    백엔드 <span class="category__count back__count"></span>
+                </button>
+                <button class="category__btn" onclick="ProjectButtonClick('.ai', this)">
+                    인공지능 <span class="category__count ai__count"></span>
+                </button>
+            </div>
+            <div class="work__projects">
+                <a href="http://lehj2308.dothome.co.kr/cloneCoding.html" class="project front" target="_blank">
+                    <img src="./images/kyochon.png" alt="교촌치킨" class="project__img">
+                    <div class="project__description">
+                        <h3>교촌치킨 클론코딩</h3>
+                        <span>교촌치킨과 너무 똑같아서 헤깔림</span>
+                    </div>
+                </a>
+                <a href="#" class="project front" target="_blank">
+                    <img src="./images/kyochon.png" alt="교촌치킨" class="project__img">
+                    <div class="project__description">
+                        <h3>페이코 클론코딩</h3>
+                        <span>페이코 로그인 회원가입 창</span>
+                    </div>
+                </a>
+                <a href="#" class="project front" target="_blank">
+                    <img src="./images/kyochon.png" alt="교촌치킨" class="project__img">
+                    <div class="project__description">
+                        <h3>Add-on</h3>
+                        <span>Add-on 페이지 프론트엔드 개발</span>
+                    </div>
+                </a>
+                <a href="#" class="project back" target="_blank">
+                    <img src="./images/kyochon.png" alt="교촌치킨" class="project__img">
+                    <div class="project__description">
+                        <h3>Local-guide</h3>
+                        <span>Local-guide 페이지 프론트엔드, 백엔드 개발</span>
+                    </div>
+                </a>
+                <a href="#" class="project back" target="_blank">
+                    <img src="./images/kyochon.png" alt="교촌치킨" class="project__img">
+                    <div class="project__description">
+                        <h3>몽글가게</h3>
+                        <span>몽글가게 페이지 프론트엔드, 백엔드 개발</span>
+                    </div>
+                </a>
+                <a href="#" class="project back" target="_blank">
+                    <img src="./images/kyochon.png" alt="교촌치킨" class="project__img">
+                    <div class="project__description">
+                        <h3>MediQa!</h3>
+                        <span>메디컬 페이지 프론트엔드, 백엔드 개발</span>
+                    </div>
+                </a>
+                <a href="#" class="project ai" target="_blank">
+                    <img src="./images/kyochon.png" alt="교촌치킨" class="project__img">
+                    <div class="project__description">
+                        <h3>챗봇개발</h3>
+                        <span>잘 대답함</span>
+                    </div>
+                </a>
+                <a href="#" class="project ai" target="_blank">
+                    <img src="./images/kyochon.png" alt="교촌치킨" class="project__img">
+                    <div class="project__description">
+                        <h3>챗봇기반 사이트</h3>
+                        <span>사이트 운영 잘됨</span>
+                    </div>
+                </a>
+                <a href="#" class="project ai" target="_blank">
+                    <img src="./images/kyochon.png" alt="교촌치킨" class="project__img">
+                    <div class="project__description">
+                        <h3>캠을 통한 얼굴인식</h3>
+                        <span>인식 잘됨</span>
+                    </div>
+                </a>
+                <a href="#" class="project ai" target="_blank">
+                    <img src="./images/kyochon.png" alt="교촌치킨" class="project__img">
+                    <div class="project__description">
+                        <h3>OCR</h3>
+                        <span>사진 잘 봄</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- 내 작업실 끝 -->
+    <!-- 추천서 시작 -->
+    <section id="testimonials" class="section">
+        <div class="section__container">
+            <h1>추천서</h1>
+            <h3>이분들이 저를 이렇게 추천하셨어요!</h3>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <img src="./images/avatar1.webp" alt="" class="testimonial__avatar">
+                    <div class="testimonial__speech-bubble">
+                        <p>이현준님은 저의 동료이자 업무 파트너였습니다. 이현준님은 우리 팀에서 백엔드 개발자로 근무했으며, 주로 자바 기술을 사용하여 프로젝트를 개발하였습니다.</p>
+                        <p class="name"><a href="https://namu.wiki/w/%EB%85%B8%ED%95%98%EB%9D%BC%20%ED%9E%88%EB%A1%9C%EC%8B%9C" target="_blank">신형만</a></p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <img src="./images/avatar2.webp" alt="" class="testimonial__avatar">
+                    <div class="testimonial__speech-bubble">
+                        <p>이현준님은 뛰어난 개발 역량과 문제 해결 능력을 가지고 있습니다. 그는 새로운 기술에 대한 지식을 쉽게 습득하고, 프로젝트에 대한 이해도가 높아 빠르게 개발을 진행할 수 있었습니다. 또한, 팀원들과의 원활한 소통과 협력으로 프로젝트를 효과적으로 완료하는 데 기여하였습니다.</p>
+                        <p class="name"><a href="https://namu.wiki/w/%EB%85%B8%ED%95%98%EB%9D%BC%20%EB%AF%B8%EC%82%AC%EC%97%90" target="_blank">봉미선</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 추천서 끝 -->
+    <!-- 연락주세요 시작 -->
+    <section id="contact" class="section">
+        <h1 class="contact__title">연락주세요</h1>
+        <h2 class="contact__email">lehj2308@gmail.com</h2>
+        <div class="contact__links">
+            <a href="https://github.com/leeCodingStudio" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/lehj2308/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+        <p class="contact__rights">
+            2023 Lee - All rights reserved
+        </p>
+    </section>
+    <!-- 연락주세요 끝 -->
+    <button class="arrow-up" onclick="goToScroll('home')">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+</body>
+</html>
